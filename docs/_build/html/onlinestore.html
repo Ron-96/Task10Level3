@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>onlinestore package &mdash; Django Project Task 10 Level 3 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="onlinestore.migrations package" href="onlinestore.migrations.html" />
+    <link rel="prev" title="WebSite" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Django Project Task 10 Level 3
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">WebSite</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">onlinestore package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="onlinestore.migrations.html">onlinestore.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-admin-module">onlinestore.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-apps-module">onlinestore.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.apps.onlinestoreConfig"><code class="docutils literal notranslate"><span class="pre">onlinestoreConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-models-module">onlinestore.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.models.AlbumTitleSuggestion"><code class="docutils literal notranslate"><span class="pre">AlbumTitleSuggestion</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.models.Post"><code class="docutils literal notranslate"><span class="pre">Post</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-tests-module">onlinestore.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-urls-module">onlinestore.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onlinestore-views-module">onlinestore.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.authenticate_user"><code class="docutils literal notranslate"><span class="pre">authenticate_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.blah"><code class="docutils literal notranslate"><span class="pre">blah()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.blog"><code class="docutils literal notranslate"><span class="pre">blog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.evil"><code class="docutils literal notranslate"><span class="pre">evil()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.exgirl"><code class="docutils literal notranslate"><span class="pre">exgirl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.noplant"><code class="docutils literal notranslate"><span class="pre">noplant()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.post"><code class="docutils literal notranslate"><span class="pre">post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.store"><code class="docutils literal notranslate"><span class="pre">store()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.suggestion_list"><code class="docutils literal notranslate"><span class="pre">suggestion_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.typical"><code class="docutils literal notranslate"><span class="pre">typical()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#onlinestore.views.vote"><code class="docutils literal notranslate"><span class="pre">vote()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-onlinestore">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WebSite.html">WebSite package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django Project Task 10 Level 3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">WebSite</a></li>
+      <li class="breadcrumb-item active">onlinestore package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/onlinestore.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="onlinestore-package">
+<h1>onlinestore package<a class="headerlink" href="#onlinestore-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="onlinestore.migrations.html">onlinestore.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onlinestore.migrations.html#module-onlinestore.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="onlinestore-admin-module">
+<h2>onlinestore.admin module<a class="headerlink" href="#onlinestore-admin-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.admin"></span></section>
+<section id="onlinestore-apps-module">
+<h2>onlinestore.apps module<a class="headerlink" href="#onlinestore-apps-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.apps"></span><dl class="py class">
+<dt class="sig sig-object py" id="onlinestore.apps.onlinestoreConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">onlinestore.apps.</span></span><span class="sig-name descname"><span class="pre">onlinestoreConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.apps.onlinestoreConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<p>Configuration class for the ‘onlinestore’ Django app.</p>
+<p>This class is used to configure various settings and behavior specific to the
+‘onlinestore’ app. It inherits from the base AppConfig class provided by Django.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default_auto_field</strong> (<em>str</em>) – The default auto-generated field type to use for primary keys
+in models. In this case, it is set to ‘django.db.models.BigAutoField’,
+which means that Django will use a 64-bit integer for primary keys on models
+created in this app.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the app. This attribute is used by Django to uniquely identify
+the app in the project and in various configurations. In this case, it is set to
+‘onlinestore’, which is the name of the Django app.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>This class should be defined in the ‘apps.py’ file of the ‘onlinestore’ app.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.apps.onlinestoreConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#onlinestore.apps.onlinestoreConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.apps.onlinestoreConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'onlinestore'</span></em><a class="headerlink" href="#onlinestore.apps.onlinestoreConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="onlinestore-models-module">
+<h2>onlinestore.models module<a class="headerlink" href="#onlinestore-models-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.models"></span><dl class="py class">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">onlinestore.models.</span></span><span class="sig-name descname"><span class="pre">AlbumTitleSuggestion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A model representing album title suggestions.</p>
+<p>This model is used to store album title suggestions provided by users.
+It contains two fields: ‘title’ and ‘votes’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – The title of the album suggested by the user.</p></li>
+<li><p><strong>votes</strong> (<em>int</em>) – The number of votes received for this suggestion.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.title" title="Permalink to this definition"></a></dt>
+<dd><p>The title of the album suggested by the user. It is a character field
+with a maximum length of 255 characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.votes">
+<span class="sig-name descname"><span class="pre">votes</span></span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.votes" title="Permalink to this definition"></a></dt>
+<dd><p>The number of votes received for this suggestion. It is an integer field
+with a default value of 0, indicating that no votes have been received initially.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Methods<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>__str__(): Returns the string representation of the album title suggestion, which is</dt><dd><p>the title itself. This method is used to display the suggestion in a human-readable
+format, such as in the admin interface or when printing the object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>This model should be used to store and manage album title suggestions in the application.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.AlbumTitleSuggestion.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#onlinestore.models.AlbumTitleSuggestion.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">votes</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="onlinestore.models.Post">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">onlinestore.models.</span></span><span class="sig-name descname"><span class="pre">Post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.models.Post" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A model representing a blog post.</p>
+<p>This model is used to store blog posts created by users. It contains four fields: ‘title’,
+‘body’, ‘signature’, and ‘date’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – The title of the blog post.</p></li>
+<li><p><strong>body</strong> (<em>str</em>) – The main content of the blog post.</p></li>
+<li><p><strong>signature</strong> (<em>str</em>) – The signature or author’s name associated with the blog post.</p></li>
+<li><p><strong>date</strong> (<em>datetime.datetime</em>) – The date and time when the blog post was published.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#onlinestore.models.Post.title" title="Permalink to this definition"></a></dt>
+<dd><p>The title of the blog post. It is a character field with a maximum length of 140 characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.body">
+<span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#onlinestore.models.Post.body" title="Permalink to this definition"></a></dt>
+<dd><p>The main content of the blog post. It is a text field, allowing longer text entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.signature">
+<span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#onlinestore.models.Post.signature" title="Permalink to this definition"></a></dt>
+<dd><p>The signature or author’s name associated with the blog post. It is a character field
+with a maximum length of 140 characters and has a default value of “RG Baby”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#onlinestore.models.Post.date" title="Permalink to this definition"></a></dt>
+<dd><p>The date and time when the blog post was published. It is a DateTime field
+representing the moment of publication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime.datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Methods<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>__str__(): Returns the string representation of the blog post, which is its title. This method is used</dt><dd><p>to display the post in a human-readable format, such as in the admin interface or when printing the object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>This model should be used to store and manage blog posts in the application.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="onlinestore.models.Post.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#onlinestore.models.Post.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="onlinestore.models.Post.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#onlinestore.models.Post.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="onlinestore.models.Post.get_next_by_date">
+<span class="sig-name descname"><span class="pre">get_next_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.models.Post.get_next_by_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="onlinestore.models.Post.get_previous_by_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.models.Post.get_previous_by_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#onlinestore.models.Post.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="onlinestore.models.Post.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#onlinestore.models.Post.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#id4" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#id5" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="onlinestore-tests-module">
+<h2>onlinestore.tests module<a class="headerlink" href="#onlinestore-tests-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.tests"></span></section>
+<section id="onlinestore-urls-module">
+<h2>onlinestore.urls module<a class="headerlink" href="#onlinestore-urls-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.urls"></span></section>
+<section id="onlinestore-views-module">
+<h2>onlinestore.views module<a class="headerlink" href="#onlinestore-views-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-onlinestore.views"></span><dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.authenticate_user">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">authenticate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.authenticate_user" title="Permalink to this definition"></a></dt>
+<dd><p>View function for authenticating user login.</p>
+<p>This view function handles POST requests containing user login credentials.
+It attempts to authenticate the user using the ‘authenticate’ method provided by Django.
+If the authentication is successful, the user is logged in, and the view redirects
+them to the ‘WebTest’ view. If the authentication fails, the user is redirected back
+to the ‘login’ view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s login request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the authentication is successful, it redirects the user to
+the ‘WebTest’ view. If the authentication fails, it redirects the user to the ‘login’ view.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>Make sure you have a login page with the name ‘login’ and a view ‘WebTest’ to handle authenticated users.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.blah">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">blah</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.blah" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘blah.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘blah.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.blog">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">blog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.blog" title="Permalink to this definition"></a></dt>
+<dd><p>View function to display a list of blog posts.</p>
+<p>This view function retrieves all the blog posts from the database using the Post
+model and orders them by the ‘date’ field in descending order. The sorted posts
+are then passed to the ‘blog.html’ template for rendering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘blog.html’ template, including the list of blog
+posts in the context.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.evil">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">evil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.evil" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘evil.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘evil.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.exgirl">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">exgirl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.exgirl" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘exgirl.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘exgirl.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.noplant">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">noplant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.noplant" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘noplant.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘noplant.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.post">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.post" title="Permalink to this definition"></a></dt>
+<dd><p>View function to display a single blog post.</p>
+<p>This view function retrieves a specific blog post identified by its primary key (ID)
+‘pk’ from the database using the Post model. If the post is found, it is passed to
+the ‘post.html’ template for rendering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p></li>
+<li><p><strong>pk</strong> (<em>int</em>) – The primary key (ID) of the blog post to display.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘post.html’ template, including the blog post
+in the context.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.register">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.register" title="Permalink to this definition"></a></dt>
+<dd><p>View function for user registration.</p>
+<p>This view function handles both GET and POST requests for user registration.
+When a GET request is made, it initializes an empty UserCreationForm to display the registration form.
+When a POST request is made, it validates the form data and creates a new user account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s registration request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the request method is POST and the form data is valid, it redirects
+the user to the ‘login’ view to log in. Otherwise, it renders the ‘register.html’
+template with the UserCreationForm to display the registration form.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>This view expects a template named ‘register.html’ that includes the form for user registration.
+The form should be linked to this view’s URL path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.store">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.store" title="Permalink to this definition"></a></dt>
+<dd><p>View function for handling album title suggestions submitted via a form.</p>
+<p>This view function handles both GET and POST requests. When a GET request is made,
+it initializes an empty AlbumTitleSuggestionForm to display the suggestion form.
+When a POST request is made, it validates the form data and saves the valid
+suggestion to the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the request method is POST and the form data is valid, it redirects
+the user to the ‘suggestion_list’ view. Otherwise, it renders the ‘WebTest.html’
+template with the AlbumTitleSuggestionForm to display the suggestion form.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>This view expects a template named ‘WebTest.html’ that includes the form for submitting
+album title suggestions. The form should be linked to this view’s URL path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.suggestion_list">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">suggestion_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.suggestion_list" title="Permalink to this definition"></a></dt>
+<dd><p>View function to display a list of album title suggestions.</p>
+<p>This view function retrieves all the album title suggestions from the database
+using the AlbumTitleSuggestion model and passes them to the ‘suggestion_list.html’
+template for rendering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘suggestion_list.html’ template, including the
+list of album title suggestions in the context.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.typical">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">typical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.typical" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘typical.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘typical.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.user_login">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.user_login" title="Permalink to this definition"></a></dt>
+<dd><p>View function to render the ‘login.html’ template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP response with the ‘login.html’ template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="onlinestore.views.vote">
+<span class="sig-prename descclassname"><span class="pre">onlinestore.views.</span></span><span class="sig-name descname"><span class="pre">vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suggestion_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onlinestore.views.vote" title="Permalink to this definition"></a></dt>
+<dd><p>View function to handle voting for an album title suggestion.</p>
+<p>This view function increments the vote count for a specific album title suggestion
+identified by ‘suggestion_id’. If the suggestion is found, its vote count is increased
+by 1, and the suggestion is saved to the database. After that, the user is redirected
+back to the ‘suggestion_list’ view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The HTTP request object representing the user’s request.</p></li>
+<li><p><strong>suggestion_id</strong> (<em>int</em>) – The primary key (ID) of the album title suggestion to vote for.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An HTTP redirect response to the ‘suggestion_list’ view.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponseRedirect</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-onlinestore">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-onlinestore" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="WebSite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="onlinestore.migrations.html" class="btn btn-neutral float-right" title="onlinestore.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, R.Gibson.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

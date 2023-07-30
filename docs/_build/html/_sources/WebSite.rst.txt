@@ -1,0 +1,45 @@
+WebSite package
+=====================
+
+Submodules
+----------
+
+WebSite.asgi module
+-------------------------
+
+.. automodule:: WebSite.asgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+WebSite.settings module
+-----------------------------
+
+.. automodule:: WebSite.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+WebSite.urls module
+-------------------------
+
+.. automodule:: WebSite.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+WebSite.wsgi module
+-------------------------
+
+.. automodule:: WebSite.wsgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: WebSite
+   :members:
+   :undoc-members:
+   :show-inheritance:

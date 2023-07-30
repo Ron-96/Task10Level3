@@ -1,0 +1,69 @@
+onlinestore package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   onlinestore.migrations
+
+Submodules
+----------
+
+onlinestore.admin module
+---------------------
+
+.. automodule:: onlinestore.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+onlinestore.apps module
+--------------------
+
+.. automodule:: onlinestore.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+onlinestore.models module
+----------------------
+
+.. automodule:: onlinestore.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+onlinestore.tests module
+---------------------
+
+.. automodule:: onlinestore.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+onlinestore.urls module
+--------------------
+
+.. automodule:: onlinestore.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+onlinestore.views module
+---------------------
+
+.. automodule:: onlinestore.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: onlinestore
+   :members:
+   :undoc-members:
+   :show-inheritance:

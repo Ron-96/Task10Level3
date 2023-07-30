@@ -1,0 +1,10 @@
+onlinestore.migrations package
+===========================
+
+Module contents
+---------------
+
+.. automodule:: onlinestore.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:
